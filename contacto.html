@@ -30,68 +30,80 @@
     <div class="doodle"></div>
 
     <main>
-      <div class="page-head">
+      <div class="page-head bg-light py-5 text-center text-md-start">
         <div class="container">
-          <p class="tag">contactanos</p>
-          <h1>Contanos qué necesita tu mascota y te damos un turno.</h1>
+          <span class="badge bg-primary text-uppercase px-3 py-2 mb-2">contactanos</span>
+          <h1 class="display-6 fw-bold text-dark">Contanos qué necesita tu mascota y te damos un turno.</h1>
         </div>
       </div>
 
-      <section class="content-section">
-        <div class="container contact-grid">
-          <div>
-            <ul class="info-list">
-              <li>
-                <span class="label">DIRECCIÓN</span>
-                Bulevar Roca 512, Rafaela, Santa Fe
-              </li>
-              <li>
-                <span class="label">TELÉFONO</span>
-                (03492) 415-3320
-              </li>
-              <li>
-                <span class="label">EMAIL</span>
-                <a href="mailto:hola@lamary.com.ar">hola@lamary.com.ar</a>
-              </li>
-              <li>
-                <span class="label">HORARIO DE ATENCIÓN</span>
-                Lunes a viernes, 8 a 12 y 16 a 20 h. Emergencias las 24 hs.
-              </li>
-            </ul>
-            <p class="map-note">
-              Mapa de ubicación pendiente de agregar — reemplazar este bloque
-              por el mapa embebido cuando esté disponible.
-            </p>
-          </div>
+      <section class="py-5">
+        <div class="container">
+          <div class="row g-5">
+            
+            <div class="col-12 col-md-6">
+              <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item px-0 py-3">
+                  <span class="d-block text-muted small fw-bold text-uppercase">Dirección</span>
+                  <p class="mb-0 fw-semibold text-dark">Bulevar Roca 512, Rafaela, Santa Fe</p>
+                </li>
+                <li class="list-group-item px-0 py-3">
+                  <span class="d-block text-muted small fw-bold text-uppercase">Teléfono</span>
+                  <p class="mb-0 fw-semibold text-dark">(03492) 415-3320</p>
+                </li>
+                <li class="list-group-item px-0 py-3">
+                  <span class="d-block text-muted small fw-bold text-uppercase">Email</span>
+                  <a href="mailto:hola@lamary.com.ar" class="text-decoration-none fw-semibold text-primary">hola@lamary.com.ar</a>
+                </li>
+                <li class="list-group-item px-0 py-3">
+                  <span class="d-block text-muted small fw-bold text-uppercase">Horario de Atención</span>
+                  <p class="mb-0 text-secondary">
+                    Lunes a viernes, 8 a 12 y 16 a 20 h.<br>
+                    <span class="text-danger fw-bold">Emergencias las 24 hs.</span>
+                  </p>
+                </li>
+              </ul>
+              
+              <div class="alert alert-secondary text-center small mb-0" role="alert">
+                Mapa de ubicación pendiente de agregar — reemplazar este bloque por el mapa embebido cuando esté disponible.
+              </div>
+            </div>
 
-          <form class="contact-form" action="#" method="post">
-            <div class="field">
-              <label for="nombre">Nombre y apellido</label>
-              <input type="text" id="nombre" name="nombre" required />
+            <div class="col-12 col-md-6">
+              <div class="card border-0 shadow-sm p-4">
+                <form action="#" method="post">
+                  
+                  <div class="mb-3">
+                    <label for="nombre" class="form-label fw-semibold text-dark">Nombre y apellido</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" required />
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="email" class="form-label fw-semibold text-dark">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" required />
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="mascota" class="form-label fw-semibold text-dark">Nombre de tu mascota</label>
+                    <input type="text" id="mascota" name="mascota" class="form-control" placeholder="Ej: Firulais" />
+                  </div>
+                  
+                  <div class="mb-4">
+                    <label for="mensaje" class="form-label fw-semibold text-dark">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" class="form-control" rows="4" required></textarea>
+                  </div>
+                  
+                  <button type="submit" class="btn btn-primary btn-lg w-100 shadow-sm">Enviar mensaje</button>
+                  
+                </form>
+              </div>
             </div>
-            <div class="field">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="field">
-              <label for="mascota">Nombre de tu mascota</label>
-              <input
-                type="text"
-                id="mascota"
-                name="mascota"
-                placeholder="Ej: Firulais"
-              />
-            </div>
-            <div class="field">
-              <label for="mensaje">Mensaje</label>
-              <textarea id="mensaje" name="mensaje" required></textarea>
-            </div>
-            <button type="submit">Enviar mensaje</button>
-          </form>
+
+          </div>
         </div>
       </section>
     </main>
-
+    
     <footer class="site-footer">
       <div class="container">
         <p>&copy; 2026 La Mary — Clínica Veterinaria.</p>
