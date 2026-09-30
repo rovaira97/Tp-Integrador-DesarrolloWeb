@@ -582,24 +582,20 @@ a {
    Footer
    ========================================================= */
 
-.site-footer {
-  background: var(--color-footer-bg);
-  color: var(--color-footer-text);
+.site-footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
-.site-footer p {
-  color: var(--color-footer-text);
-  font-size: 0.85rem;
-}
-
-.footer-nav a {
-  color: var(--color-footer-text);
-  font-size: 0.85rem;
-  text-decoration: none;
-}
-
-.footer-nav a:hover {
-  color: var(--color-white);
+.footer-nav {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 /* =========================================================
