@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Turnos — La Mary</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="turnos.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg p-0">
+        <div class="container">
+          <a class="navbar-brand brand" href="index.html">
+            <img src="img/logo.jpg" alt="Logo La Mary" class="brand-logo" />
+            <span class="brand-name">La Mary</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Abrir menú de navegación"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="institucional.html">Institucional</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="mascotas.html">Mascotas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="veterinarios.html">Veterinarios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="turnos.html" aria-current="page">Turnos</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="container py-5">
+        <div class="row g-4">
+          <!-- LISTADO -->
+          <article class="col-12 col-lg-7">
+            <span class="badge rounded-pill text-bg-primary fw-semibold">TURNOS</span>
+            <h2 class="fs-1 fw-semibold mt-2 mb-4">
+              Turnos Registrados
+              <span class="badge text-bg-secondary align-middle fs-5" id="total">0</span>
+            </h2>
+
+            <div class="tabla-card">
+              <table class="table tabla-admin align-middle">
+                <thead>
+                  <tr>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Mascota</th>
+                    <th>Veterinario</th>
+                    <th>Motivo</th>
+                    <th class="text-end">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody id="listado-turnos">
+                  <!-- Se llena dinámicamente con JavaScript -->
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <!-- FORMULARIO -->
+          <article class="col-12 col-lg-5">
+            <form
+              class="d-flex flex-column gap-3 p-4 bg-body-tertiary rounded-4"
+              id="form-turno"
+            >
+              <h3 class="fs-4">Nuevo Turno</h3>
+
+              <div id="mensaje"></div>
+
+              <div>
+                <label for="selMascota" class="form-label">Mascota</label>
+                <select id="selMascota" class="form-select" required></select>
+              </div>
+
+              <div>
+                <label for="selVeterinario" class="form-label">Veterinario</label>
+                <select id="selVeterinario" class="form-select" required></select>
+              </div>
+
+              <div>
+                <label for="fecha" class="form-label">Fecha</label>
+                <input type="date" id="fecha" class="form-control" required />
+              </div>
+
+              <div>
+                <label for="hora" class="form-label">Hora</label>
+                <input type="time" id="hora" class="form-control" required />
+              </div>
+
+              <div>
+                <label for="motivo" class="form-label">Motivo de la consulta</label>
+                <input
+                  type="text"
+                  id="motivo"
+                  class="form-control"
+                  pattern=".*\S.*"
+                  title="No puede estar vacío"
+                  required
+                />
+              </div>
+
+              <button class="btn btn-primary" type="submit">Registrar Turno</button>
+            </form>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2026 La Mary — Clínica Veterinaria.</p>
+        <ul class="footer-nav">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="institucional.html">Institucional</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="mascotas.html">Mascotas</a></li>
+          <li><a href="veterinarios.html">Veterinarios</a></li>
+          <li><a href="turnos.html">Turnos</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
