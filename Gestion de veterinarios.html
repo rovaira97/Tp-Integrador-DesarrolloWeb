@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Veterinaria La Mary - Gestión de Veterinarios</title>
+
+  
+  <script defer src="veterinarios.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="logo">
+      <div class="icon">
+        <p>M</p>
+      </div>
+      <div class="marca">
+        <h1>La Mary</h1>
+        <h2>CLÍNICA VETERINARIA</h2>
+      </div>
+    </a>
+  </header>
+
+  <main class="container my-5">
+    <h2 class="mb-4">Gestión de Veterinarios</h2>
+    
+    <form id="formVeterinario" class="mb-5" novalidate>
+      <div class="mb-3">
+        <label for="matricula" class="form-label">Matrícula</label>
+        <input type="text" id="matricula" class="form-control">
+      </div>
+
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" id="nombre" class="form-control">
+      </div>
+
+      <div class="mb-3">
+        <label for="especializacion" class="form-label">Especialización</label>
+        <input type="text" id="especializacion" class="form-control">
+      </div>
+
+      <div class="mb-3">
+        <label for="valorConsulta" class="form-label">Valor de Consulta</label>
+        <input type="number" id="valorConsulta" class="form-control">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Dar de Alta</button>
+    </form>
+
+    <h3 class="mb-3">Listado de Veterinarios</h3>
+    
+    
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>idVeterinario</th>
+          <th>Matrícula</th>
+          <th>Nombre</th>
+          <th>Especialización</th>
+          <th>Valor Consulta</th>
+        </tr>
+      </thead>
+      <tbody id="tablaVeterinarios">
+        <!-- Se rellena dinámicamente con JS -->
+      </tbody>
+    </table>
+  </main>
+
+</body>
+</html>
