@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel de Administración — La Mary</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script defer src="./sesion.js"></script>
+    <script>
+      if (!estaLogueado()) {
+        window.location.href = 'login.html';
+      }
+    </script>
+    <script defer src="./panelAdmin.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg p-0">
+        <div class="container">
+          <a class="navbar-brand brand" href="index.html">
+            <img src="img/logo.jpg" alt="Logo La Mary" class="brand-logo" />
+            <span class="brand-name">La Mary</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Abrir menú de navegación"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-lg-auto align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="institucional.html">Institucional</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="mascotas.html">Mascotas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="veterinarios.html">Veterinarios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="turnos.html">Turnos</a>
+              </li>
+              <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                <button class="btn btn-outline-secondary btn-sm" onclick="cerrarSesion()">Cerrar sesión</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="container py-5">
+        <span class="badge rounded-pill text-bg-primary fw-semibold mb-2">PANEL ADMIN</span>
+        <h2 class="fs-1 fw-semibold mb-1">Hola, <span id="nombre-usuario"></span></h2>
+        <p class="text-secondary mb-4">Elegí un módulo para gestionar.</p>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+          <article class="col">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body d-flex flex-column gap-2">
+                <h3 class="card-title fs-4">Mascotas</h3>
+                <p class="card-text text-muted small">Alta, edición y baja de mascotas.</p>
+                <span class="badge text-bg-secondary align-self-start" id="total-mascotas">0</span>
+                <a href="mascotas.html" class="btn btn-primary mt-auto">Ingresar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="col">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body d-flex flex-column gap-2">
+                <h3 class="card-title fs-4">Veterinarios</h3>
+                <p class="card-text text-muted small">Gestión del equipo profesional.</p>
+                <span class="badge text-bg-secondary align-self-start">Módulo activo</span>
+                <a href="veterinarios.html" class="btn btn-primary mt-auto">Ingresar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="col">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body d-flex flex-column gap-2">
+                <h3 class="card-title fs-4">Turnos</h3>
+                <p class="card-text text-muted small">Agenda de turnos de la clínica.</p>
+                <span class="badge text-bg-secondary align-self-start">Módulo activo</span>
+                <a href="turnos.html" class="btn btn-primary mt-auto">Ingresar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="col">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body d-flex flex-column gap-2">
+                <h3 class="card-title fs-4">Historia Clínica</h3>
+                <p class="card-text text-muted small">Registro de consultas y tratamientos.</p>
+                <span class="badge text-bg-warning align-self-start">Próximamente</span>
+                <button class="btn btn-primary mt-auto" disabled>Ingresar</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2026 La Mary — Clínica Veterinaria.</p>
+        <ul class="footer-nav">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="institucional.html">Institucional</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="mascotas.html">Mascotas</a></li>
+          <li><a href="veterinarios.html">Veterinarios</a></li>
+          <li><a href="turnos.html">Turnos</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

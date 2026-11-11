@@ -9,7 +9,17 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <script defer src="veterinarios.js"></script>
+
+    <script defer src="./sesion.js"></script>
+    <script>
+      if (!estaLogueado()) {
+        window.location.href = 'login.html';
+      }
+    </script>
+    
+    <script defer src="veterinarios.js"></script> 
+
+
   </head>
   <body>
     <header class="site-header">
