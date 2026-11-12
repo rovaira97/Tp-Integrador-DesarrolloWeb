@@ -10,16 +10,13 @@
     />
     <link rel="stylesheet" href="css/style.css" />
 
-    <script defer src="./sesion.js"></script>
+    <script src="./sesion.js"></script>
     <script>
       if (!estaLogueado()) {
-        window.location.href = 'login.html';
+        window.location.href = "login.html";
       }
     </script>
-    
-    <script defer src="veterinarios.js"></script> 
-
-
+    <script defer src="veterinarios.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -41,28 +38,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-lg-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="institucional.html">Institucional</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contacto.html">Contacto</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="mascotas.html">Mascotas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="veterinarios.html" aria-current="page"
-                  >Veterinarios</a
-                >
-                <li class="nav-item">
-                  <a class="nav-link" href="turnos.html">Turnos</a>
-                </li>
-              </li>
-            </ul>
+            <ul class="navbar-nav ms-lg-auto"></ul>
           </div>
         </div>
       </nav>
@@ -96,9 +72,7 @@
                     <th class="text-end">Acciones</th>
                   </tr>
                 </thead>
-                <tbody id="listado-veterinarios">
-                  <!-- Se llena dinámicamente con JavaScript -->
-                </tbody>
+                <tbody id="listado-veterinarios"></tbody>
               </table>
             </div>
           </article>
@@ -111,7 +85,6 @@
             >
               <h3 class="fs-4" id="tituloFormulario">Nuevo Veterinario</h3>
 
-              <!-- Campo oculto necesario para que funcione la edición -->
               <input type="hidden" name="idVeterinario" id="idVeterinario" />
 
               <div>
@@ -194,14 +167,7 @@
     <footer class="site-footer">
       <div class="container">
         <p>&copy; 2026 La Mary — Clínica Veterinaria.</p>
-        <ul class="footer-nav">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="institucional.html">Institucional</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="mascotas.html">Mascotas</a></li>
-          <li><a href="veterinarios.html">Veterinarios</a></li>
-          <li><a href="turnos.html">Turnos</a></li>
-        </ul>
+        <ul class="footer-nav"></ul>
       </div>
     </footer>
 

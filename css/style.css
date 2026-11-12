@@ -96,21 +96,17 @@ a {
   display: block;
 }
 
-/* ajustes de color para los links usando las variables propias */
 .navbar-nav .nav-link {
   color: var(--color-text-muted) !important;
   font-size: 1.05rem;
   transition: color 0.2s ease;
 }
 
-/* cambia a azul al pasar el mouse o al tocar */
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link:focus {
   color: var(--color-primary) !important;
 }
 
-/* Elemento decorativo heredado del proyecto original: lo dejamos
-   neutro para que no interfiera visualmente con el header */
 .doodle {
   height: 0;
 }
@@ -127,6 +123,12 @@ a {
   font-size: 0.9rem;
   border: 2px solid transparent;
   cursor: pointer;
+}
+
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  border-radius: 6px;
 }
 
 .btn-primary {
@@ -146,6 +148,54 @@ a {
 
 .btn-ghost:hover {
   background: var(--color-primary-light);
+}
+
+/* =========================================================
+   Tablas Admin
+   ========================================================= */
+
+.tabla-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.tabla-admin {
+  margin-bottom: 0;
+}
+
+.acciones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.btn-accion {
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  border-radius: 6px;
+}
+
+.btn-editar {
+  background-color: #f59e0b;
+  color: #fff;
+}
+
+.btn-editar:hover {
+  background-color: #d97706;
+  color: #fff;
+}
+
+.btn-eliminar {
+  background-color: #ef4444;
+  color: #fff;
+}
+
+.btn-eliminar:hover {
+  background-color: #dc2626;
+  color: #fff;
 }
 
 /* =========================================================
@@ -204,8 +254,6 @@ a {
   display: block;
 }
 
-/* Clase heredada: se mantiene por si se reutiliza el número
-   destacado (.num) en otra parte del sitio */
 .num {
   color: var(--color-primary);
   font-weight: 700;
@@ -359,18 +407,7 @@ a {
 }
 
 /* =========================================================
-   Institucional: historia + valores
-   ========================================================= */
-
-.two-col {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-}
-
-/* =========================================================
-   Sectorizado: separación visual entre bloques de contenido
-   (fondo alternado + línea sutil entre secciones)
+   Sectorizado
    ========================================================= */
 
 .content-section {
@@ -389,198 +426,15 @@ a {
   box-shadow: inset 0 1px 0 var(--color-border);
 }
 
-.timeline {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  border-left: 2px solid var(--color-primary-light);
-}
-
-.timeline li {
-  position: relative;
-  padding: 0 0 28px 24px;
-  color: var(--color-text-muted);
-}
-
-.timeline li::before {
-  content: "";
-  position: absolute;
-  left: -7px;
-  top: 4px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--color-primary);
-}
-
-.timeline .year {
-  display: block;
-  font-weight: 700;
-  color: var(--color-primary);
-  margin-bottom: 4px;
-}
-
-.values {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.values h3 {
-  font-size: 1.05rem;
-}
-
-.values p {
-  font-size: 0.9rem;
-  margin-bottom: 0;
-}
-
-/* Equipo */
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.team-card {
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: 24px;
-  text-align: center;
-  box-shadow: var(--shadow-sm);
-}
-
-.avatar {
-  width: 56px;
-  height: 56px;
-  margin: 0 auto 12px;
-  border-radius: 50%;
-  background: var(--color-primary-light);
-  color: var(--color-primary-dark);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-}
-
-.team-card .name {
-  font-weight: 700;
-  margin: 0;
-  color: var(--color-text);
-}
-
-.team-card .role {
-  display: block;
-  font-size: 0.8rem;
-  color: var(--color-primary);
-  margin-bottom: 10px;
-}
-
-.team-card p {
-  font-size: 0.85rem;
-  margin-bottom: 0;
-}
-
-/* =========================================================
-   Contacto
-   ========================================================= */
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-}
-
-.info-list {
-  list-style: none;
-  margin: 0 0 24px;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.info-list li {
-  padding-left: 28px;
-  position: relative;
-  color: var(--color-text);
-}
-
-/* Íconos simples con pseudo-elemento, como en la referencia
-   (marcador azul antes de cada dato de contacto) */
-.info-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 6px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--color-primary);
-}
-
-.info-list .label {
-  display: block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--color-primary);
-  letter-spacing: 0.03em;
-  margin-bottom: 2px;
-}
-
-.map-note {
-  font-size: 0.85rem;
-  font-style: italic;
-  color: var(--color-text-muted);
-}
-
-.contact-form {
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  padding: 32px;
-}
-
-.field {
-  margin-bottom: 18px;
-}
-
-.field label {
-  display: block;
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-bottom: 6px;
-  color: var(--color-text);
-}
-
-.field input,
-.field textarea {
-  width: 100%;
-  padding: 10px 12px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  font-family: inherit;
-  font-size: 0.95rem;
-}
-
-.field textarea {
-  min-height: 110px;
-  resize: vertical;
-}
-
-.contact-form button {
-  width: 100%;
-}
-
 /* =========================================================
    Footer
    ========================================================= */
+
+.site-footer {
+  padding: 24px 0;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-white);
+}
 
 .site-footer .container {
   display: flex;
@@ -593,9 +447,31 @@ a {
 .footer-nav {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   margin: 0;
   padding: 0;
+}
+
+/* =========================================================
+   Impresión de Comprobante
+   ========================================================= */
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #area-comprobante,
+  #area-comprobante * {
+    visibility: visible;
+  }
+  #area-comprobante {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 24px;
+  }
 }
 
 /* =========================================================
@@ -603,24 +479,17 @@ a {
    ========================================================= */
 
 @media (max-width: 900px) {
-  .hero .container,
-  .two-col,
-  .contact-grid {
+  .hero .container {
     grid-template-columns: 1fr;
   }
 
   .courses,
-  .team-grid,
   .pets-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 560px) {
-  .main-nav ul {
-    gap: 16px;
-  }
-
   .hero h1 {
     font-size: 1.8rem;
   }
@@ -630,7 +499,6 @@ a {
   }
 
   .courses,
-  .team-grid,
   .pets-grid {
     grid-template-columns: 1fr;
   }

@@ -10,10 +10,10 @@
     />
     <link rel="stylesheet" href="css/style.css" />
 
-    <script defer src="./sesion.js"></script>
+    <script src="./sesion.js"></script>
     <script>
       if (!estaLogueado()) {
-        window.location.href = 'login.html';
+        window.location.href = "login.html";
       }
     </script>
     <script defer src="./panelAdmin.js"></script>
@@ -38,29 +38,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-lg-auto align-items-lg-center">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="institucional.html">Institucional</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contacto.html">Contacto</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="mascotas.html">Mascotas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="veterinarios.html">Veterinarios</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="turnos.html">Turnos</a>
-              </li>
-              <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                <button class="btn btn-outline-secondary btn-sm" onclick="cerrarSesion()">Cerrar sesión</button>
-              </li>
-            </ul>
+            <ul class="navbar-nav ms-lg-auto"></ul>
           </div>
         </div>
       </nav>
@@ -68,8 +46,12 @@
 
     <main>
       <section class="container py-5">
-        <span class="badge rounded-pill text-bg-primary fw-semibold mb-2">PANEL ADMIN</span>
-        <h2 class="fs-1 fw-semibold mb-1">Hola, <span id="nombre-usuario"></span></h2>
+        <span class="badge rounded-pill text-bg-primary fw-semibold mb-2"
+          >PANEL ADMIN</span
+        >
+        <h2 class="fs-1 fw-semibold mb-1">
+          Hola, <span id="nombre-usuario"></span>
+        </h2>
         <p class="text-secondary mb-4">Elegí un módulo para gestionar.</p>
 
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
@@ -77,9 +59,17 @@
             <div class="card h-100 shadow-sm border-0">
               <div class="card-body d-flex flex-column gap-2">
                 <h3 class="card-title fs-4">Mascotas</h3>
-                <p class="card-text text-muted small">Alta, edición y baja de mascotas.</p>
-                <span class="badge text-bg-secondary align-self-start" id="total-mascotas">0</span>
-                <a href="mascotas.html" class="btn btn-primary mt-auto">Ingresar</a>
+                <p class="card-text text-muted small">
+                  Alta, edición y baja de mascotas.
+                </p>
+                <span
+                  class="badge text-bg-secondary align-self-start"
+                  id="total-mascotas"
+                  >0 registradas</span
+                >
+                <a href="mascotas.html" class="btn btn-primary mt-auto"
+                  >Ingresar</a
+                >
               </div>
             </div>
           </article>
@@ -88,9 +78,17 @@
             <div class="card h-100 shadow-sm border-0">
               <div class="card-body d-flex flex-column gap-2">
                 <h3 class="card-title fs-4">Veterinarios</h3>
-                <p class="card-text text-muted small">Gestión del equipo profesional.</p>
-                <span class="badge text-bg-secondary align-self-start">Módulo activo</span>
-                <a href="veterinarios.html" class="btn btn-primary mt-auto">Ingresar</a>
+                <p class="card-text text-muted small">
+                  Gestión del equipo profesional.
+                </p>
+                <span
+                  class="badge text-bg-secondary align-self-start"
+                  id="total-veterinarios"
+                  >0 registrados</span
+                >
+                <a href="veterinarios.html" class="btn btn-primary mt-auto"
+                  >Ingresar</a
+                >
               </div>
             </div>
           </article>
@@ -99,9 +97,17 @@
             <div class="card h-100 shadow-sm border-0">
               <div class="card-body d-flex flex-column gap-2">
                 <h3 class="card-title fs-4">Turnos</h3>
-                <p class="card-text text-muted small">Agenda de turnos de la clínica.</p>
-                <span class="badge text-bg-secondary align-self-start">Módulo activo</span>
-                <a href="turnos.html" class="btn btn-primary mt-auto">Ingresar</a>
+                <p class="card-text text-muted small">
+                  Agenda de turnos y comprobantes.
+                </p>
+                <span
+                  class="badge text-bg-secondary align-self-start"
+                  id="total-turnos"
+                  >0 agendados</span
+                >
+                <a href="turnos.html" class="btn btn-primary mt-auto"
+                  >Ingresar</a
+                >
               </div>
             </div>
           </article>
@@ -110,9 +116,17 @@
             <div class="card h-100 shadow-sm border-0">
               <div class="card-body d-flex flex-column gap-2">
                 <h3 class="card-title fs-4">Historia Clínica</h3>
-                <p class="card-text text-muted small">Registro de consultas y tratamientos.</p>
-                <span class="badge text-bg-warning align-self-start">Próximamente</span>
-                <button class="btn btn-primary mt-auto" disabled>Ingresar</button>
+                <p class="card-text text-muted small">
+                  Registro de consultas, signos y tratamientos.
+                </p>
+                <span
+                  class="badge text-bg-secondary align-self-start"
+                  id="total-historias"
+                  >0 registros</span
+                >
+                <a href="historia-clinica.html" class="btn btn-primary mt-auto"
+                  >Ingresar</a
+                >
               </div>
             </div>
           </article>
@@ -123,14 +137,7 @@
     <footer class="site-footer">
       <div class="container">
         <p>&copy; 2026 La Mary — Clínica Veterinaria.</p>
-        <ul class="footer-nav">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="institucional.html">Institucional</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="mascotas.html">Mascotas</a></li>
-          <li><a href="veterinarios.html">Veterinarios</a></li>
-          <li><a href="turnos.html">Turnos</a></li>
-        </ul>
+        <ul class="footer-nav"></ul>
       </div>
     </footer>
 
